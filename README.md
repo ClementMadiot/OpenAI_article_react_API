@@ -29,7 +29,8 @@ If you're getting started and need assistance or face any bugs, join our active 
 
 - React.js
 - TypeScript
-- Redux Toolkit
+- [Redux_Toolkit](https://redux-toolkit.js.org/introduction/getting-started)
+Redux Toolkit is a JavaScript library that enhances Redux application development by providing pre-built tools and features, such as code generators, hooks, and reducers, to improve efficiency and maintainability.
 - [TailwindCSS](https://tailwindcss.com/docs/installation)
 Tailwind CSS is a valuable tool for developers who want to build modern, responsive, and visually appealing websites without sacrificing development speed.
 
