@@ -28,6 +28,8 @@ If you're getting started and need assistance or face any bugs, join our active 
 
 - React.js
 - TypeScript
+- [react-redux](https://react-redux.js.org/introduction/getting-started)
+React Redux is the official React UI bindings layer for Redux. It lets your React components read data from a Redux store, and dispatch actions to the store to update state.
 - [Redux_Toolkit](https://redux-toolkit.js.org/introduction/getting-started)
   Redux Toolkit is a JavaScript library that enhances Redux application development by providing pre-built tools and features, such as code generators, hooks, and reducers, to improve efficiency and maintainability.
 - [TailwindCSS](https://tailwindcss.com/docs/installation)
