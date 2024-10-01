@@ -1,7 +1,7 @@
 <div align="center">
   <div>
     <img src="https://img.shields.io/badge/-React_JS-black?style=for-the-badge&logoColor=white&logo=react&color=61DAFB" alt="react.js" />
-    <img src="https://img.shields.io/badge/-TypeScript-black?style=for-the-badge&logoColor=white&logo=typescript&color=3178C6" alt="typescript" />
+    <img src="https://img.shields.io/badge/-Vite-black?style=for-the-badge&logoColor=white&logo=vite&color=646CFF" alt="vite" />
     <img src="https://img.shields.io/badge/-Redux-black?style=for-the-badge&logoColor=white&logo=redux&color=764ABC" alt="redux" />
     <img src="https://img.shields.io/badge/-Tailwind_CSS-black?style=for-the-badge&logoColor=white&logo=tailwindcss&color=06B6D4" alt="tailwindcss" />
   </div>
@@ -18,7 +18,6 @@
 - 🚀 [Launch App](#launch-app)
 - 🎨 [Styling](#style)
 
-
 ## <a name="introduction">🤖 Introduction</a>
 
 Summarize any kind of article with just one click using the powerful OpenAI model.
@@ -30,9 +29,9 @@ If you're getting started and need assistance or face any bugs, join our active 
 - React.js
 - TypeScript
 - [Redux_Toolkit](https://redux-toolkit.js.org/introduction/getting-started)
-Redux Toolkit is a JavaScript library that enhances Redux application development by providing pre-built tools and features, such as code generators, hooks, and reducers, to improve efficiency and maintainability.
+  Redux Toolkit is a JavaScript library that enhances Redux application development by providing pre-built tools and features, such as code generators, hooks, and reducers, to improve efficiency and maintainability.
 - [TailwindCSS](https://tailwindcss.com/docs/installation)
-Tailwind CSS is a valuable tool for developers who want to build modern, responsive, and visually appealing websites without sacrificing development speed.
+  Tailwind CSS is a valuable tool for developers who want to build modern, responsive, and visually appealing websites without sacrificing development speed.
 
 ## <a name="features">🔋 Features</a>
 
@@ -46,19 +45,18 @@ Tailwind CSS is a valuable tool for developers who want to build modern, respons
 
 👉 **Advanced RTK Query API Requests**: Utilizes the advanced capabilities of Redux Toolkit (RTK) Query for making API requests. These requests fire conditionally based on specific criteria, optimizing data fetching and management.
 
-and many more, including code architecture and reusability 
+and many more, including code architecture and reusability
 
 ## <br /> <a name="launch-app">🚀 Launch App</a>
 
 Follow these steps to set up the project locally on your machine.
 
-**Prerequisites**
-
-Make sure you have the following installed on your machine:
-
-- [Git](https://git-scm.com/)
-- [Node.js](https://nodejs.org/en)
-- [npm](https://www.npmjs.com/) (Node Package Manager)
+> [!IMPORTANT]
+> Make sure you have the following installed on your machine:
+>
+> - [Git](https://git-scm.com/)
+> - [Node.js](https://nodejs.org/en)
+> - [npm](https://www.npmjs.com/) (Node Package Manager)
 
 **Cloning the Repository**
 
@@ -85,17 +83,15 @@ Replace the placeholder values with your actual credentials. You can obtain thes
 
 ## <br /> <a name="style">🎨 Styling</a>
 
-Global styling are defined using **TailwindCSS** in the tailwind.config.js file.
+Global styling are defined using **CSS** & **TailwindCSS**
 
 <details>
 <summary><code>App.css</code></summary>
-
 
 ```css
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 ```
 
 </details>
@@ -103,14 +99,12 @@ Global styling are defined using **TailwindCSS** in the tailwind.config.js file.
 <details>
 <summary><code>tailwind.config.js</code></summary>
 
-````cjs
+```cjs
 theme: {
     extend: {
 
     },
   },
-````
+```
 
 </details>
-
-# OpenAI_article_react_API
