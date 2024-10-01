@@ -1,25 +1,45 @@
 import React, { useEffect, useState } from "react";
-import { copy, loader, tick, IoArrowUndo, LuLink2 } from "../../assets";
+import { copy, loader, tick, IoArrowUndo, LuLink2, FaCopy } from "../../assets";
 import { useLazyGetSummaryQuery } from "../../services/article";
 
 function Demo() {
   const [article, setarticle] = useState({
-    url: '',
-    summary: ''
-  })
+    url: "",
+    summary: "",
+  });
 
-  const [getSummary, { error, isFetching }] = useLazyGetSummaryQuery()
+  const [allArticles, setAllArticles] = useState([]);
+
+  const [getSummary, { error, isFetching }] = useLazyGetSummaryQuery();
+
+  //keep the result with useEffect
+  useEffect(() => {
+    const articlesFromLocalStorage = JSON.parse(
+      localStorage.getItem("article")
+    );
+
+    if (articlesFromLocalStorage) {
+      setAllArticles(articlesFromLocalStorage);
+    }
+  }, []);
 
   const handleSumbit = async (e) => {
-    e.preventDefault()
-    const { data } = await getSummary({articleUrl: article.url})
+    e.preventDefault();
+    const { data } = await getSummary({ articleUrl: article.url });
 
-    if(data?.summary) {
-      const newArticle = {...article, summary: data.summary}
-      setarticle(newArticle)
-      console.log(newArticle)
+    if (data?.summary) {
+      // create the result
+      const newArticle = { ...article, summary: data.summary };
+      // save the result
+      const updateAllArticles = [newArticle, ...allArticles];
+
+      setarticle(newArticle);
+      setAllArticles(updateAllArticles);
+
+      console.log(newArticle);
+      localStorage.setItem(JSON.stringify(updateAllArticles));
     }
-  }
+  };
   return (
     <section className="mt-16 w-full max-w-xl">
       <div className="flex flex-col w-full gap-2">
@@ -46,6 +66,24 @@ function Demo() {
         </form>
 
         {/* Browse URL History  */}
+        <div className="flex flex-col gap-1 max-h-60 overflow-y-auto">
+          {allArticles.map((item, index) => (
+            <div
+              key={`link-${index}`}
+              onClick={() => setarticle(item)}
+              className="relative flex justify-start items-center flex-row bg-white border border-gray-200 gap-3 rounded-lg cursor-pointer"
+            >
+              <div className="p-2 rounded-full bg-white/10  backdrop-blur flex justify-center items-center cursor-pointer">
+                <button className="flex items-center justify-center p-1 text-gray-500 border border-gray-200 hover:border-gray-700 hover:text-gray-700 rounded transition-colors">
+                  <FaCopy />
+                </button>
+                <p className="flex-1 ml-6 font-satoshi text-blue-700 hover:text-blue-900 font-medium text-sm truncate">
+                  {item.url}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* Display Result  */}
