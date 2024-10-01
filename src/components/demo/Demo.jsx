@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { copy, loader, tick, IoArrowUndo, LuLink2 } from "../../assets";
+import { useLazyGetSummaryQuery } from "../../services/article";
 
 function Demo() {
   const [article, setarticle] = useState({
@@ -7,9 +8,17 @@ function Demo() {
     summary: ''
   })
 
+  const [getSummary, { error, isFetching }] = useLazyGetSummaryQuery()
+
   const handleSumbit = async (e) => {
     e.preventDefault()
-    console.log('submit')
+    const { data } = await getSummary({articleUrl: article.url})
+
+    if(data?.summary) {
+      const newArticle = {...article, summary: data.summary}
+      setarticle(newArticle)
+      console.log(newArticle)
+    }
   }
   return (
     <section className="mt-16 w-full max-w-xl">
