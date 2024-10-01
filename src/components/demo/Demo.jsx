@@ -66,7 +66,7 @@ function Demo() {
         </form>
 
         {/* Browse URL History  */}
-        <div className="flex flex-col gap-1 max-h-60 overflow-y-auto">
+        <article className="flex flex-col gap-1 max-h-60 overflow-y-auto">
           {allArticles.map((item, index) => (
             <div
               key={`link-${index}`}
@@ -83,10 +83,30 @@ function Demo() {
               </div>
             </div>
           ))}
-        </div>
+        </article>
       </div>
 
       {/* Display Result  */}
+      <div className="my-10 max-w-full flex justify-center items-center">
+        {isFetching ? (
+          <img src={loader} alt="loader" className="w-20 h-20 object-contain" />
+        ) : error ? (
+          <p className="font-inter font-bold text-black text-center">
+            Well, that wasn`&rsquo;`t supposed to happen..
+            <br />
+            <span>{error?.data.error}</span>
+          </p>
+        ) : (
+          article.summary && (
+            <div className="flex flex-col gap-3">
+              <h2 className="font-satoshi font-bold text-gray-600 text-xl">Article{" "}
+                <span className="font-black bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">Summary</span>
+              </h2>
+              <div className="rounded-xl border border-gray-200 bg-white/20 shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0.2)] backdrop-blur p-4">{article.summary}</div>
+            </div>
+          )
+        )}
+      </div>
     </section>
   );
 }
