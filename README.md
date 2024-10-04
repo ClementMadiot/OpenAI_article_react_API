@@ -20,20 +20,25 @@
 
 ## <a name="introduction">🤖 Introduction</a>
 
-Summarize any kind of article with just one click using the powerful OpenAI model.
+Summarize any kind of article with just one click using the powerful OpenAI model, using Rapid API to generate it
 
-If you're getting started and need assistance or face any bugs, join our active Discord community with over 27k+ members. It's a place where people help each other out.
 
 ## <a name="tech-stack">⚙️ Tech Stack</a>
 
-- React.js
-- TypeScript
 - [react-redux](https://react-redux.js.org/introduction/getting-started)
 React Redux is the official React UI bindings layer for Redux. It lets your React components read data from a Redux store, and dispatch actions to the store to update state.
+
 - [Redux_Toolkit](https://redux-toolkit.js.org/introduction/getting-started)
   Redux Toolkit is a JavaScript library that enhances Redux application development by providing pre-built tools and features, such as code generators, hooks, and reducers, to improve efficiency and maintainability.
+
 - [TailwindCSS](https://tailwindcss.com/docs/installation)
   Tailwind CSS is a valuable tool for developers who want to build modern, responsive, and visually appealing websites without sacrificing development speed.
+
+  - [react-icon](https://www.npmjs.com/package/react-icons)
+Include popular icons in your React projects easily with react-icons, which utilizes ES6 imports that allows you to include only the icons that your project is using.
+
+- [RAPID_API](https://docs.rapidapi.com/docs/navigating-this-documentation)
+Platform that provides access to thousands of APIs through a single unified platform. Allows developers to discover, connect, and manage APIs in one place, simplifying the process of integrating third-party APIs into applications.
 
 ## <a name="features">🔋 Features</a>
 
@@ -69,7 +74,19 @@ cd {git project..}
 
 **Installation**
 
-> After cloning the repository, run the command `npm install` to install the project's dependencies.
+> After cloning the repository, run the command `npm i` or `yarn i` to install the project's dependencies.
+
+_npm_
+
+```
+npm install 
+```
+
+_yarn_
+
+```
+yarn install
+```
 
 > Once the dependencies are installed, start the project with the command `npm run dev`.
 
@@ -91,9 +108,82 @@ Global styling are defined using **CSS** & **TailwindCSS**
 <summary><code>App.css</code></summary>
 
 ```css
+:root {
+  --radicalGradient-pattern:radial-gradient(
+    at 27% 37%,
+    hsla(215, 98%, 61%, 1) 0px,
+    transparent 0%
+    ),
+  radial-gradient(at 97% 21%, hsla(125, 98%, 72%, 1) 0px, transparent 50%),
+  radial-gradient(at 52% 99%, hsla(354, 98%, 61%, 1) 0px, transparent 50%),
+  radial-gradient(at 10% 29%, hsla(256, 96%, 67%, 1) 0px, transparent 50%),
+  radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 1) 0px, transparent 50%),
+  radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 1) 0px, transparent 50%),
+  radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 1) 0px, transparent 50%);
+  --radicalGradient-main:radial-gradient(circle, rgba(2, 0, 36, 0) 0, #fafafa);
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+.main {
+  width: 100vw;
+  min-height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  padding: 120px 24px 160px 24px;
+  pointer-events: none;
+} 
+
+.main:before {
+  position: absolute;
+  content: "";
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+.main:after {
+  content: "";
+  background-image: url("/src/assets/grid.svg");
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0.4;
+  filter: invert(1);
+}
+
+.gradient {
+  height: fit-content;
+  z-index: 3;
+  width: 100%;
+  max-width: 640px;
+  background-image: var(--radicalGradient-pattern);
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  filter: blur(100px) saturate(150%);
+  top: 80px;
+  opacity: 0.15;
+}
+
+@media screen and (max-width: 640px) {
+  .main {
+    padding: 0;
+  }
+}
 ```
 
 </details>
@@ -102,11 +192,25 @@ Global styling are defined using **CSS** & **TailwindCSS**
 <summary><code>tailwind.config.js</code></summary>
 
 ```cjs
-theme: {
-    extend: {
+/** @type {import('tailwindcss').Config} */
 
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      fontFamily: {
+        satoshi: ['Satoshi', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
+      },
     },
   },
+  plugins: [],
+}
+
+
 ```
 
 </details>
