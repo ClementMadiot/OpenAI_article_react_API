@@ -20,6 +20,10 @@
 
 ## <a name="introduction">🤖 Introduction</a>
 
+**[ENG]** An AI-powered article summarizer website that extracts and summarizes the key content of a given URL. It provides concise information and insights, helping users quickly grasp the essence of any article.
+
+**[FR]** Un site web de résumé d'articles alimenté par l'IA qui extrait et résume les éléments clés d'une URL donnée. Il fournit des informations concises et des insights, permettant aux utilisateurs de saisir rapidement l'essentiel de n'importe quel article.
+
 Summarize any kind of article with just one click using the powerful OpenAI model, using Rapid API to generate it
 
 
