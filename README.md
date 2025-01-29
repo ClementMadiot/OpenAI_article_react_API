@@ -1,12 +1,13 @@
 <div align="center">
-  <div>
+<a href="https://openai-cm.netlify.app/" target="_blanck"><img src="./public/OpenAI-screen.png" alt="OpenAI web page"></a>
+  <div align="center">
     <img src="https://img.shields.io/badge/-React_JS-black?style=for-the-badge&logoColor=white&logo=react&color=61DAFB" alt="react.js" />
     <img src="https://img.shields.io/badge/-Vite-black?style=for-the-badge&logoColor=white&logo=vite&color=646CFF" alt="vite" />
     <img src="https://img.shields.io/badge/-Redux-black?style=for-the-badge&logoColor=white&logo=redux&color=764ABC" alt="redux" />
     <img src="https://img.shields.io/badge/-Tailwind_CSS-black?style=for-the-badge&logoColor=white&logo=tailwindcss&color=06B6D4" alt="tailwindcss" />
   </div>
 
-  <h3 align="center">An AI Article Summarizer Website</h3>
+  <h3 align="center">An AI Article Summarizer Website with ChatGPT-4</h3>
 
 </div>
 
@@ -18,12 +19,16 @@
 - 🚀 [Launch App](#launch-app)
 - 🎨 [Styling](#style)
 
-## <a name="introduction">🤖 Introduction</a>
+## <a name="introduction">✨ Introduction</a>
 
 Summarize any kind of article with just one click using the powerful OpenAI model, using Rapid API to generate it
 
+**[ENG]** This AI-powered article summarizer website uses ChatGPT-4 to instantly generate concise summaries of any article with just one click. By integrating RapidAPI, the platform ensures smooth API calls for quick and accurate summarization. The site offers a clean, modern user interface, built with React and TailwindCSS, providing a seamless experience for users. Whether it's summarizing lengthy articles or saving a history of previous summaries, this website streamlines the process, making it easy for users to access and share content efficiently.
 
-## <a name="tech-stack">⚙️ Tech Stack</a>
+**[FR]** Ce site web de résumé d'articles alimenté par l'IA utilise ChatGPT-4 pour générer instantanément des résumés concis de n'importe quel article en un clic. Grâce à l'intégration de RapidAPI, la plateforme optimise les appels API pour une summarisation rapide et précise. L'interface moderne et épurée, construite avec React et TailwindCSS, offre une expérience fluide à l'utilisateur. Que ce soit pour résumer des articles longs ou sauvegarder l'historique des résumés précédents, ce site simplifie le processus, facilitant l'accès et le partage du contenu.
+
+
+## <a name="tech-stack">🛠 Tech Stack</a>
 
 - [react-redux](https://react-redux.js.org/introduction/getting-started)
 React Redux is the official React UI bindings layer for Redux. It lets your React components read data from a Redux store, and dispatch actions to the store to update state.
