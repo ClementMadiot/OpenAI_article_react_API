@@ -218,8 +218,5 @@ export default {
   },
   plugins: [],
 }
-
-
 ```
-
 </details>
