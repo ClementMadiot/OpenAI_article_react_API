@@ -21,12 +21,6 @@
 
 ## <a name="introduction">✨ Introduction</a>
 
-**[ENG]** An AI-powered article summarizer website that extracts and summarizes the key content of a given URL. It provides concise information and insights, helping users quickly grasp the essence of any article.
-
-**[FR]** Un site web de résumé d'articles alimenté par l'IA qui extrait et résume les éléments clés d'une URL donnée. Il fournit des informations concises et des insights, permettant aux utilisateurs de saisir rapidement l'essentiel de n'importe quel article.
-
-Summarize any kind of article with just one click using the powerful OpenAI model, using Rapid API to generate it
-
 **[ENG]** This AI-powered article summarizer website uses ChatGPT-4 to instantly generate concise summaries of any article with just one click. By integrating RapidAPI, the platform ensures smooth API calls for quick and accurate summarization. The site offers a clean, modern user interface, built with React and TailwindCSS, providing a seamless experience for users. Whether it's summarizing lengthy articles or saving a history of previous summaries, this website streamlines the process, making it easy for users to access and share content efficiently.
 
 **[FR]** Ce site web de résumé d'articles alimenté par l'IA utilise ChatGPT-4 pour générer instantanément des résumés concis de n'importe quel article en un clic. Grâce à l'intégration de RapidAPI, la plateforme optimise les appels API pour une summarisation rapide et précise. L'interface moderne et épurée, construite avec React et TailwindCSS, offre une expérience fluide à l'utilisateur. Que ce soit pour résumer des articles longs ou sauvegarder l'historique des résumés précédents, ce site simplifie le processus, facilitant l'accès et le partage du contenu.
